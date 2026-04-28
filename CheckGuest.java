@@ -13,16 +13,30 @@ public class CheckGuest {
 
         boolean isFound = false;
 
-        // ciclo for
+        // Ciclo for
 
-        for (int i = 0; i < guestList.length; i++) {
-            // System.out.println(guestList[i]);
+        // for (int i = 0; i < guestList.length; i++) {
+        // // System.out.println(guestList[i]);
+        // if (guestList[i].toLowerCase().equals(nameOfUser)) {
+        // System.out.println("Sei invitato");
+        // isFound = true;
+        // break;
+        // }
+
+        // }
+
+        // Ciclo While
+
+        int i = 0;
+
+        while (i < guestList.length && isFound == false) {
+
             if (guestList[i].toLowerCase().equals(nameOfUser)) {
                 System.out.println("Sei invitato");
                 isFound = true;
-                break;
             }
 
+            i++;
         }
 
         if (!isFound) {
